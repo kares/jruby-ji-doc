@@ -7,6 +7,8 @@ require 'yard'
 
 argv = [ '--no-private', '--hide-void-return' ]
 
+argv.push '--readme', File.expand_path('README.md', File.dirname(__FILE__))
+
 argv.push '-o', File.expand_path(File.dirname(__FILE__)), RB_DOC_FILES
 
 Dir.chdir JRUBY_BASE_DIR do
