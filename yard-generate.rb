@@ -15,48 +15,19 @@ argv.push '--no-cache'
 
 argv.push '-o', File.expand_path(File.dirname(__FILE__)), RB_DOC_FILES
 
-# require 'pp'
-
 module YARD::RegisterDocstringHook
-  def register(*objects, &block)
-    obj = super(*objects, &block)
-    if obj.docstring.nil? || obj.docstring.empty?
+  def register_docstring(object, *args)
+    if object.docstring.nil? || object.docstring.empty?
       if parent = statement.parent
-        obj.docstring = parent.docstring
+        object.docstring = parent.docstring
       end
     end
-    obj
+    super(object, *args)
   end
 end
 
 class YARD::Handlers::Ruby::ModuleHandler
   include YARD::RegisterDocstringHook
-
-  # process do
-  #   modname = statement[0].source
-  #   mod = register ModuleObject.new(namespace, modname)
-  #
-  #   #mod = ModuleObject.new(namespace, modname)
-  #   # NOTE: register sets the docstring!
-  #   #puts "bef0-process: modname = #{modname} - #{mod.inspect} docstring: #{mod.docstring.inspect}"
-  #   #mod = register mod
-  #
-  #   begin
-  #   if mod.docstring.nil? || mod.docstring.empty?
-  #     if parent = statement.parent
-  #       mod.docstring = parent.docstring
-  #     end
-  #     # while parent && parent.type != :comment
-  #     #   parent = parent.parent
-  #     # end
-  #     #pp statement
-  #   end
-  #   rescue => e
-  #     puts e.inspect
-  #   end
-  #   parse_block(statement[1], :namespace => mod)
-  # end
-
 end
 
 class YARD::Handlers::Ruby::ClassHandler
