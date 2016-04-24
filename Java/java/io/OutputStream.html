@@ -99,7 +99,35 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Only explicit (or customized) Ruby methods are listed here, instances will
+have all of their Java methods available.</p>
+</div>
+  </div>
 
+
+<p>Java <strong>java.io.OutputStream</strong> objects are convertible to Ruby
+`IO`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html" target="_parent" title="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html</a></li>
+    
+  </ul>
+
+</div>
 
 
 
@@ -230,12 +258,12 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.io.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.io.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_io'>to_io</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaIo.java
@@ -250,7 +278,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 22 17:49:25 2016 by
+  Generated on Sat Apr 23 15:20:33 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.3).
 </div>

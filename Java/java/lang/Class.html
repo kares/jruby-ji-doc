@@ -103,7 +103,42 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'>
+<p>likely to get revised!</p>
+</div>
+  </div>
 
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Only explicit (or customized) Ruby methods are listed here, Java classes
+will have all of their Java methods available.</p>
+</div>
+  </div>
+
+
+<p><strong>java.lang.Class</strong></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" target="_parent" title="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html</a></li>
+    
+  </ul>
+
+</div>
 
 
 
@@ -475,7 +510,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ruby_class-instance_method" title="#ruby_class (instance method)">- (Module) <strong>ruby_class</strong> </a>
+      <a href="#ruby_class-instance_method" title="#ruby_class (instance method)">- (Class, Module) <strong>ruby_class</strong> </a>
     
 
     
@@ -490,7 +525,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The proxy class (module).</p>
+<p>The proxy class (or module in case of an interface).</p>
 </div></span>
   
 </li>
@@ -545,17 +580,17 @@
       <pre class="lines">
 
 
-188
-189
-190
 191
 192
 193
 194
-195</pre>
+195
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -600,6 +635,22 @@
     </li>
   
 </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>9.1</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -607,12 +658,12 @@
       <pre class="lines">
 
 
-219
-220
-221</pre>
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 219</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_abstract?'>abstract?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -659,13 +710,13 @@
       <pre class="lines">
 
 
-177
-178
-179
-180</pre>
+180
+181
+182
+183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 180</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_annotations?'>annotations?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -706,6 +757,22 @@
     </li>
   
 </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>9.1</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -713,12 +780,12 @@
       <pre class="lines">
 
 
-214
-215
-216</pre>
+218
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_anonymous?'>anonymous?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -765,13 +832,13 @@
       <pre class="lines">
 
 
-183
-184
-185
-186</pre>
+186
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 186</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_declared_annotations?'>declared_annotations?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -797,12 +864,12 @@
       <pre class="lines">
 
 
-209
-210
-211</pre>
+212
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 209</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_declared_class_methods'>declared_class_methods</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -827,12 +894,12 @@
       <pre class="lines">
 
 
-201
-202
-203</pre>
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_declared_instance_methods'>declared_instance_methods</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -879,12 +946,12 @@
       <pre class="lines">
 
 
-239
-240
-241</pre>
+244
+245
+246</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_final?'>final?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -938,12 +1005,12 @@
       <pre class="lines">
 
 
-161
-162
-163</pre>
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -968,12 +1035,12 @@
       <pre class="lines">
 
 
-205
-206
-207</pre>
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_java_class_methods'>java_class_methods</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -998,12 +1065,12 @@
       <pre class="lines">
 
 
-197
-198
-199</pre>
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 200</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_java_instance_methods'>java_instance_methods</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1050,12 +1117,12 @@
       <pre class="lines">
 
 
-234
-235
-236</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private?'>private?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1102,12 +1169,12 @@
       <pre class="lines">
 
 
-229
-230
-231</pre>
+234
+235
+236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_protected?'>protected?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1154,12 +1221,12 @@
       <pre class="lines">
 
 
-224
-225
-226</pre>
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 229</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public?'>public?</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1206,12 +1273,12 @@
       <pre class="lines">
 
 
-166
-167
-168</pre>
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resource_as_stream'>resource_as_stream</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1258,13 +1325,13 @@
       <pre class="lines">
 
 
-171
-172
-173
-174</pre>
+174
+175
+176
+177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resource_as_string'>resource_as_string</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1278,7 +1345,7 @@
       <div class="method_details ">
   <h3 class="signature " id="ruby_class-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Module.html" title="Module (class)">Module</a></span></tt>) <strong>ruby_class</strong> 
+    - (<tt>Class</tt>, <tt><span class='object_link'><a href="../../../Module.html" title="Module (class)">Module</a></span></tt>) <strong>ruby_class</strong> 
   
 
   
@@ -1287,7 +1354,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the proxy class (module)</p>
+<p>Returns the proxy class (or module in case of an interface).</p>
 
 
   </div>
@@ -1300,13 +1367,13 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Module.html" title="Module (class)">Module</a></span></tt>)</span>
+        <span class='type'>(<tt>Class</tt>, <tt><span class='object_link'><a href="../../../Module.html" title="Module (class)">Module</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>the proxy class (module)</p>
+<p>the proxy class (or module in case of an interface).</p>
 </div>
       
     </li>
@@ -1319,13 +1386,13 @@
       <pre class="lines">
 
 
-150
-151
-152
-153</pre>
+153
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ruby_class'>ruby_class</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1380,12 +1447,12 @@
       <pre class="lines">
 
 
-156
-157
-158</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -1400,7 +1467,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 22 17:49:23 2016 by
+  Generated on Sat Apr 23 15:20:31 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.3).
 </div>

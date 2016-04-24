@@ -99,7 +99,35 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Only explicit (or customized) Ruby methods are listed, instances will have
+all of their Java methods available.</p>
+</div>
+  </div>
 
+
+<p><strong>java.util.regex.Matcher</strong> represents a Java regex `Pattern`
+match, customized to quack like Ruby&#39;s `MatchData`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html" target="_parent" title="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html">http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html</a></li>
+    
+  </ul>
+
+</div>
 
 
 
@@ -424,17 +452,23 @@ n-th element of the match array in the string.</p>
     
 <p>Matcher acts like an array and its capture elements might be accessed.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HX1138</span><span class='tstring_end'>&#39;</span></span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>113</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
-
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HX1138</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>113</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -462,12 +496,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -500,16 +534,22 @@ n-th element of the match array in the string.</p>
 <p>Returns the offset of the start of the n-th element of the match array in
 the string.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>1</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>2</span></code></pre>
-
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>1</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>2</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -559,12 +599,12 @@ the string.</p>
       <pre class="lines">
 
 
-109
-110
-111</pre>
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='kw'>begin</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -623,12 +663,12 @@ the string.</p>
       <pre class="lines">
 
 
-62
-63
-64</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_captures'>captures</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -661,16 +701,22 @@ the string.</p>
 <p>Returns the offset of the character immediately following the end of the
 n-th element of the match array in the string.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>7</span>
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>3</span></code></pre>
-
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>7</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='int'>3</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -720,12 +766,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-123
-124
-125</pre>
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='kw'>end</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -750,7 +796,16 @@ n-th element of the match array in the string.</p>
 <p>Returns the offset of the character immediately following the end of the
 n-th element of the match array in the string.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>7</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span> <span class='int'>7</span><span class='rbracket'>]</span>
@@ -758,12 +813,9 @@ n-th element of the match array in the string.</p>
 <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(?&lt;foo&gt;.)(.)(?&lt;bar&gt;.)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hoge</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='symbol'>:bar</span><span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_eq'>eq</span> <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span></code></pre>
-
-
+    
   </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -813,12 +865,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-140
-141
-142</pre>
+149
+150
+151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -867,12 +919,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-152
-153
-154</pre>
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post_match'>post_match</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -921,12 +973,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-146
-147
-148</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pre_match'>pre_match</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -966,6 +1018,22 @@ n-th element of the match array in the string.</p>
     </li>
   
 </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>9.1</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -973,12 +1041,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-49
-50
-51</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_regexp'>regexp</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -1006,14 +1074,20 @@ n-th element of the match array in the string.</p>
     
 <p>Returns the number of elements in the match array.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='comment'># 5</span></code></pre>
-
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='comment'># 5</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1034,12 +1108,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-94
-95
-96</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -1064,12 +1138,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-53
-54
-55</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_string'>string</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -1093,14 +1167,20 @@ n-th element of the match array in the string.</p>
     
 <p>Returns the array of matches.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># [&#39;HX1138&#39;, &#39;H&#39;, &#39;X&#39;, &#39;113&#39;, &#39;8&#39;]</span></code></pre>
-
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_util'>util</span><span class='period'>.</span><span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='const'>Pattern</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(.)(.)(\\d+)(\\d)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>THX1138.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># [&#39;HX1138&#39;, &#39;H&#39;, &#39;X&#39;, &#39;113&#39;, &#39;8&#39;]</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1121,12 +1201,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-82
-83
-84</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -1151,12 +1231,12 @@ n-th element of the match array in the string.</p>
       <pre class="lines">
 
 
-86
-87
-88</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.util.regex.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values_at'>values_at</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaUtilRegex.java
@@ -1171,7 +1251,7 @@ n-th element of the match array in the string.</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 22 17:49:23 2016 by
+  Generated on Sat Apr 23 15:20:30 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.3).
 </div>
