@@ -183,7 +183,7 @@ java_import org.asdf.ClassName</code> where
 directory the script starts in, as the JVM doesn&#39;t seem to respond to
 Dir.chdir very well.</p>
 
-<h2 id="label-Referencing+Java+Classes+%28using+full-qualified+class+name%29">Referencing Java Classes (using full-qualified class name)</h2>
+<h2 id="label-Referencing+Java+Classes+-28using+full-qualified+class+name-29">Referencing Java Classes (using full-qualified class name)</h2>
 
 <p>You can reference a Java class in JRuby in at least two different ways.</p>
 <ul><li>
@@ -300,7 +300,7 @@ reassigning a Java class to a new constant, like</p>
   <span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'>Sys</span><span class='period'>.</span><span class='id identifier rubyid_getProperties'>getProperties</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>java.runtime.version</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 </code></pre>
 
-<h2 id="label-Use+include_package+within+a+Ruby+Module+to+import+a+Java+Package%27s+classes+on+const_missing">Use <code>include_package</code> within a Ruby Module to import a Java Package&#39;s classes on const_missing</h2>
+<h2 id="label-Use+include_package+within+a+Ruby+Module+to+import+a+Java+Package-27s+classes+on+const_missing">Use <code>include_package</code> within a Ruby Module to import a Java Package&#39;s classes on const_missing</h2>
 
 <p>Use <code>include_package &quot;package_name&quot;</code> in a Ruby Module
 to support namespaced access to the Java classes in the package. This is
@@ -800,7 +800,7 @@ byte buffer for a stream to read into. For this, you can use the
 
 <h2 id="label-More+Conversions">More Conversions</h2>
 
-<h3 id="label-java.io.InputStream+to%2Ffrom+IO"><code>java.io.InputStream</code> to/from <code>IO</code></h3>
+<h3 id="label-java.io.InputStream+to-2Ffrom+IO"><code>java.io.InputStream</code> to/from <code>IO</code></h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='id identifier rubyid_java_input_stream'>java_input_stream</span><span class='period'>.</span><span class='id identifier rubyid_to_io'>to_io</span> <span class='comment'># works for InputStreams, OutputStreams, and NIO Channels
 </span>  <span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='id identifier rubyid_to_inputstream'>to_inputstream</span> <span class='comment'># also to_outputstream and to_channel
@@ -897,7 +897,7 @@ whenever Java expects the superclass.</p>
 </span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_my_args'>my_args</span><span class='rparen'>)</span>
 </code></pre>
 
-<h2 id="label-Accessing+package%2C+protected+and+private+fields">Accessing package, protected and private fields</h2>
+<h2 id="label-Accessing+package-2C+protected+and+private+fields">Accessing package, protected and private fields</h2>
 
 <p>If you need to access package, protected and private fields on a Java
 class, you are able to do so with field_reader, field_writer and
@@ -913,8 +913,7 @@ field you want to access as a an argument.</p>
 
  protected float somevalue = 1.0f;
 
-}
-</code></pre>
+}</code></pre>
 
 <p>And you want to access the protected field <code>somevalue</code> from a
 subclass that is defined in JRuby, you can do the following:</p>
@@ -991,7 +990,7 @@ This <a
 href="http://jewelruby.kares.org/an-obvious-java-dispatch">feature</a> is
 available since JRuby <strong>1.7.22</strong> and <strong>9.0.1.0</strong>.</p>
 
-<h2 id="label-Java+classes+can%27t+inherit+from+a+JRuby+class">Java classes can&#39;t inherit from a JRuby class</h2>
+<h2 id="label-Java+classes+can-27t+inherit+from+a+JRuby+class">Java classes can&#39;t inherit from a JRuby class</h2>
 
 <p>Hopefully this feature will be added in the planned re-write of the Java
 integration layer in a future release of JRuby.</p>
@@ -1040,7 +1039,8 @@ to support this functionality. For example, the following Java code:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_synchronized'>synchronized</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span> <span class='lbrace'>{</span>
      <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span><span class='lparen'>(</span><span class='int'>1000</span><span class='rparen'>)</span><span class='semicolon'>;</span> 
- <span class='rbrace'>}</span></code></pre>
+ <span class='rbrace'>}</span>
+</code></pre>
 
 <p>is implement like this in Ruby:</p>
 
@@ -1066,9 +1066,10 @@ lambda support, and even java people have seen the light.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Sun Apr 24 14:49:59 2016 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.3).
+  generated on 2016-05-08 by
+  <a href="http://kares.org" title="kares.org" target="_blank"><b>@kares</b></a>
+  using <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  <!--0.8.7.6 (ruby-2.3.0)-->
 </div>
 
   </body>
