@@ -13,6 +13,8 @@ argv.push '--title', "JRuby's Java Integration"
 
 argv.push '--no-cache'
 
+argv.push '--template-path', File.expand_path('yard', File.dirname(__FILE__)) 
+
 argv.push '-o', File.expand_path(File.dirname(__FILE__)), RB_DOC_FILES
 
 module YARD::RegisterDocstringHook
@@ -39,4 +41,3 @@ Dir.chdir JRUBY_BASE_DIR do
 end
 
 # yard -o ~/workspace/oss/jruby/._ji-doc/ ruby/jruby/java/**/*.rb
-
