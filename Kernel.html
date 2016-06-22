@@ -87,9 +87,17 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Create convenience methods for top-level java packages so we do not need to
-prefix with Java::com. We undef these methods within Package in case we run
-into &#39;com.foo.com&#39;.</p>
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>These methods are undef-ed within Java package stubs (in case of
+<strong>com.foo.com</strong>).</p>
+</div>
+  </div>
+
+
+<p>Convenience methods for top-level packages without the need to prefix e.g.
+`Java::java.util.ArrayList`.</p>
 
 
   </div>
@@ -129,7 +137,9 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Java package short-cut method.</p>
+</div></span>
   
 </li>
 
@@ -151,7 +161,9 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Java package short-cut method.</p>
+</div></span>
   
 </li>
 
@@ -173,7 +185,9 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Java package short-cut method.</p>
+</div></span>
   
 </li>
 
@@ -195,7 +209,9 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Java package short-cut method.</p>
+</div></span>
   
 </li>
 
@@ -217,7 +233,9 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Java package short-cut method.</p>
+</div></span>
   
 </li>
 
@@ -240,18 +258,37 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Java package short-cut method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_com'>com</span><span class='period'>.</span><span class='id identifier rubyid_google'>google</span><span class='period'>.</span><span class='id identifier rubyid_common'>common</span><span class='period'>.</span><span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='const'>Strings</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_com'>com</span>
   <span class='const'>JavaUtilities</span><span class='period'>.</span><span class='id identifier rubyid_get_package_module_dot_format'>get_package_module_dot_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -270,18 +307,37 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Java package short-cut method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>System</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-6
-7
-8</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_java'>java</span>
   <span class='const'>JavaUtilities</span><span class='period'>.</span><span class='id identifier rubyid_get_package_module_dot_format'>get_package_module_dot_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>java</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -300,18 +356,37 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Java package short-cut method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_javafx'>javafx</span><span class='period'>.</span><span class='id identifier rubyid_application'>application</span><span class='period'>.</span><span class='const'>Platform</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_javafx'>javafx</span>
   <span class='const'>JavaUtilities</span><span class='period'>.</span><span class='id identifier rubyid_get_package_module_dot_format'>get_package_module_dot_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>javafx</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -330,18 +405,37 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Java package short-cut method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_javax'>javax</span><span class='period'>.</span><span class='id identifier rubyid_swing'>swing</span><span class='period'>.</span><span class='const'>SwingUtilities</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-10
-11
-12</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_javax'>javax</span>
   <span class='const'>JavaUtilities</span><span class='period'>.</span><span class='id identifier rubyid_get_package_module_dot_format'>get_package_module_dot_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>javax</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -360,18 +454,37 @@ into &#39;com.foo.com&#39;.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Java package short-cut method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_org'>org</span><span class='period'>.</span><span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='const'>JSONArray</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-22
-23
-24</pre>
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/core_ext/kernel.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_org'>org</span>
   <span class='const'>JavaUtilities</span><span class='period'>.</span><span class='id identifier rubyid_get_package_module_dot_format'>get_package_module_dot_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>org</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -386,10 +499,10 @@ into &#39;com.foo.com&#39;.</p>
 </div>
 
     <div id="footer">
-  generated on 2016-05-08 by
+  generated on 2016-06-22 by
   <a href="http://kares.org" title="kares.org" target="_blank"><b>@kares</b></a>
   using <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  <!--0.8.7.6 (ruby-2.3.0)-->
+  <!--0.8.7.6 (ruby-2.3.1)-->
 </div>
 
   </body>
