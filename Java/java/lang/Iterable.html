@@ -124,7 +124,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">- (Enumerator) <strong>each</strong>(&amp;block) </a>
+      <a href="#count-instance_method" title="#count (instance method)">- (Integer) <strong>count</strong>(obj = nil, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Re-defined `Enumerable#count`.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Java::java::util::Iterable, Enumerator) <strong>each</strong>(&amp;block) </a>
     
 
     
@@ -148,7 +172,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_with_index-instance_method" title="#each_with_index (instance method)">- (Enumerator) <strong>each_with_index</strong>(&amp;block) </a>
+      <a href="#each_with_index-instance_method" title="#each_with_index (instance method)">- (Java::java::util::Iterable, Enumerator) <strong>each_with_index</strong>(&amp;block) </a>
     
 
     
@@ -169,6 +193,32 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_a-instance_method" title="#to_a (instance method)">- (Array) <strong>to_a</strong> </a>
+    
+
+    
+      (also: #entries)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Re-defined `Enumerable#to_a`.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -180,9 +230,84 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="each-instance_method">
+  <h3 class="signature first" id="count-instance_method">
   
-    - (<tt>Enumerator</tt>) <strong>each</strong>(&amp;block) 
+    - (<tt>Integer</tt>) <strong>count</strong>(obj = nil, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Re-defined `Enumerable#count`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>matched elements count</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>9.1.3</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    - (<tt>Java::java::util::Iterable</tt>, <tt>Enumerator</tt>) <strong>each</strong>(&amp;block) 
   
 
   
@@ -204,65 +329,16 @@
     <li>
       
       
-        <span class='type'>(<tt>Enumerator</tt>)</span>
+        <span class='type'>(<tt>Java::java::util::Iterable</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>if called without a block to yield to</p>
+<p>self (since 9.1.3)</p>
 </div>
       
     </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-49
-50
-51
-52
-53</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 49</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
-</span>  <span class='comment'># iter = iterator
-</span>  <span class='comment'># yield(iter.next) while iter.hasNext
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="each_with_index-instance_method">
-  
-    - (<tt>Enumerator</tt>) <strong>each_with_index</strong>(&amp;block) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Ruby style `Enumerable#each_with_index` for Java iterable types.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
   
     <li>
       
@@ -286,18 +362,95 @@
       <pre class="lines">
 
 
-57
-58
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
+</span>  <span class='comment'># iter = iterator
+</span>  <span class='comment'># yield(iter.next) while iter.hasNext
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_with_index-instance_method">
+  
+    - (<tt>Java::java::util::Iterable</tt>, <tt>Enumerator</tt>) <strong>each_with_index</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ruby style `Enumerable#each_with_index` for Java iterable types.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Java::java::util::Iterable</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>self (since 9.1.3)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Enumerator</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if called without a block to yield to</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 59
 60
 61
 62
 63
 64
-65</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_with_index'>each_with_index</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
@@ -313,12 +466,86 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="to_a-instance_method">
+  
+    - (<tt>Array</tt>) <strong>to_a</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='entries-instance_method'>entries</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Re-defined `Enumerable#to_a`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>9.1.3</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'core/src/main/ruby/jruby/java/java_ext/java.lang.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
+  <span class='comment'># stub implemented in org.jruby.javasupport.ext.JavaLang.java
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  generated on 2016-06-22 by
+  generated on 2016-08-31 by
   <a href="http://kares.org" title="kares.org" target="_blank"><b>@kares</b></a>
   using <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   <!--0.8.7.6 (ruby-2.3.1)-->
